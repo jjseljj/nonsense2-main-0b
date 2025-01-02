@@ -64,7 +64,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
         <img src="/images/3.png" alt="Background" className="header__background" />
         <div className="product-details__border">
           <div className="header-top">
-            <button className="top-btn1" onClick={handleShare}>
+              <button className="top-btn1" onClick={handleShare}>
                   <img src="/Поделиться.png" alt="Поделиться" />
               </button>  
 
@@ -132,7 +132,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                     <input
                       type="number"
                       className="price-actions__button-empty"
-                      placeholder="Введите количество"                     
+                      placeholder="Введите цену"                     
                     />
                   </div>
 
@@ -204,7 +204,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
 
                    <div className="product-details__price-actions-bottom">
                     <div className="product-details__back-home">
-                      <Link href="/" className="back-home__button">На главную</Link>
+                      <Link href="/" className="back-home__button">Назад</Link>
                     </div>
                     
                     <button className="product-details__price-icon">
@@ -302,7 +302,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
 
                    <div className="product-details__price-actions-bottom">
                     <div className="product-details__back-home">
-                      <Link href="/" className="back-home__button">На главную</Link>
+                      <Link href="/" className="back-home__button">Назад</Link>
                     </div>
                     <button className="product-details__price-icon">
                       <div className="payment-button__content">
