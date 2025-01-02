@@ -15,9 +15,7 @@ const Header = () => {
 
   const handleToggleModal = () => {
     setIsModalOpen((prevState) => !prevState);
-  };
-  
-  
+  };  
 
   const [isLogoModalOpen, setIsLogoModalOpen] = useState(false); 
 
@@ -42,23 +40,26 @@ const Header = () => {
               Math.max(prev - Math.ceil(scrollSpeedFactor), 0)
           );
       }
-  };
-
-  
-
+  }; 
+/*
   useEffect(() => {
-    const updateItemsPerPage = () => {
-      if (window.innerWidth <= 600) {
-        setItemsPerPage(8); // Для экранов шириной до 600px
-      } else {
-        setItemsPerPage(5); // Для всех остальных экранов
-      }
-    };
+    if (typeof window !== "undefined") {
+      const updateItemsPerPage = () => {
+        if (window.innerWidth <= 600) {
+          setItemsPerPage(8); 
+        } else {
+          setItemsPerPage(5); 
+        }
+      };
   
-    updateItemsPerPage(); 
-    window.addEventListener("resize", updateItemsPerPage); 
+      updateItemsPerPage(); 
+      window.addEventListener("resize", updateItemsPerPage);
   
-  }, []);
+      return () => {
+        window.removeEventListener("resize", updateItemsPerPage);
+      };
+    }
+  }, []);*/
 
   //обработчик свайпов:
   const swipeHandlers = useSwipeable({
@@ -100,6 +101,7 @@ const Header = () => {
     }
   };
 
+  
   return (
     <header className={`header ${isModalOpen ? "modal-open" : ""}`}>
       {/* Блок с картинкой и содержимым */}
@@ -108,7 +110,6 @@ const Header = () => {
 
         {/* Рамка */}
         <div className="header__border">
-        
           {/* Кнопки сверху */}
           <div className="header-top">
               <button className="top-btn1" onClick={handleShare}>
@@ -144,28 +145,29 @@ const Header = () => {
                 </Link>
             </button>
           </div>
-
            {/* Вкладки */}
            <div className="header-buttons">
-            <button
-              className={`header-buttons__tab1 ${activeTab === "price" ? "active" : ""}`}
-              onClick={() => handleTabClick("price")}
-            >
-              Прайс
-            </button>
-            <button
-              className={`header-buttons__tab2 ${activeTab === "order" ? "active" : ""}`}
-              onClick={() => handleTabClick("order")}
-            >
-              На заказ
-            </button>
+           <Link href={`/Product/1?view=form`}> 
+              <button
+                className={`header-buttons__tab1 ${activeTab === "price" ? "active" : ""}`}
+                onClick={() => handleTabClick("price")}                
+              >
+                Прайс
+              </button>
+            </Link>
+            <Link href={`/Product/1?view=form`}> 
+              <button
+                className={`header-buttons__tab2 ${activeTab === "order" ? "active" : ""}`}
+                onClick={() => handleTabClick("order")}
+              >
+                На заказ
+              </button>
+            </Link>
           </div>
-
-          {/* Центральные кнопки */}
+          {/* Центральные кнопки */}       
           <div className="header-scroll">
             {services.map((service, index) => {
               const isExpanded = expandedIndexes.includes(index);
-
               return (
                 <div key={index} className={`button${index + 1}`}>
                   <Link href={`/Product/${service.id}?view=form`}>
@@ -179,9 +181,19 @@ const Header = () => {
                           {service?.title || "—"}
                         </span>
                         {isExpanded ? (
-                          <BiUpArrow className="side-btn__icon" />
+                          <BiUpArrow className="side-btn__icon" onClick={(e) => {
+                            e.preventDefault(); 
+                            e.stopPropagation(); 
+                            handleToggle(index); 
+                          }}
+                           />
                         ) : (
-                          <BiDownArrow className="side-btn__icon" />
+                          <BiDownArrow className="side-btn__icon" onClick={(e) => {
+                            e.preventDefault(); 
+                            e.stopPropagation(); 
+                            handleToggle(index);
+                          }}
+                           />
                         )}
                       </div>
                       <span className="side-btn__price">{service?.price || "—"}</span>
@@ -198,10 +210,8 @@ const Header = () => {
                 </div>
               );
             })}
-          </div>
-
-
-           {/* Кнопка сбоку справа */}
+          </div>         
+          {/* Кнопка сбоку справа */}
            <div className="button-right" onClick={handleToggleModal}>
               {isModalOpen ? (
                 <MdArrowForwardIos className="button-right__icon" />
@@ -214,18 +224,17 @@ const Header = () => {
               <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
                 <div
                 className="modal"
-                onClick={() => setIsModalOpen(false)} // Закрытие модального окна при клике на фон
+                onClick={() => setIsModalOpen(false)}
               >
                 <div
                   className="modal__content"
-                  onMouseDown={(e) => e.stopPropagation()} // Остановка всплытия события на всех кликах
+                  onMouseDown={(e) => e.stopPropagation()} 
                 >
                   <SecondComponent />
                 </div>
               </div>
             </div>                     
-          )}      
-
+          )}     
         </div>
       </div>
     </header>
