@@ -1,15 +1,45 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import LogoComponent from "@/Sections/LogoComponent/LogoComponent";
-
+import { RxShare2 } from "react-icons/rx";
+import { useRouter } from "next/router";
 
 const InfoComponent = () => {
   const [isLogoModalOpen, setIsLogoModalOpen] = useState(false);
+  const router = useRouter();
 
 const handleLogoClick = () => {
     console.log("Клик на логотип");
-    setIsLogoModalOpen((prevState) => !prevState); // Открытие/закрытие
+    setIsLogoModalOpen((prevState) => !prevState); 
 };
+
+ // Обработчик клика по кнопке
+ const handleShare = async () => {
+  if (typeof navigator !== "undefined" && navigator.share) {
+    try {
+      await navigator.share({
+        title: "Заголовок",
+        text: "Описание для分享",
+        url: "https://example.com",
+      });
+      console.log("Успешный шэринг!");
+    } catch (error) {
+      console.error("Ошибка при шэринге:", error);
+    }
+  } else {
+    alert("Ваш браузер не поддерживает Web Share API.");
+  }
+};
+
+
+  const handleBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 2) {
+      router.back(); // Возврат на предыдущую страницу
+    } else {
+      router.push("/"); // Если предыдущей страницы нет, перейти на главную
+    }
+  };
+
 
 
   return (
@@ -23,7 +53,7 @@ const handleLogoClick = () => {
           {/* Кнопки сверху */}
           <div className="info-component__top-buttons">
             <Link href="/Product">
-              <button className="info-top-btn1">
+              <button className="info-top-btn1" onClick={handleShare}>
                   <img src="/Поделиться.png" alt="Поделиться" />
               </button>  
             </Link>
@@ -68,7 +98,7 @@ const handleLogoClick = () => {
 
             {/* Второй div */}
             <div className="info-content__block2">
-              <p>Отбрось предрассудки, твори волшебство!</p>
+              <p>Отбрось <br /> предрассудки, <br /> твори волшебство!</p>
             </div>
 
             {/* Третий div с текстом */}
@@ -97,7 +127,22 @@ const handleLogoClick = () => {
               <p>Берегите чеки, остерегайтесь подделок!</p>
               <br />              
               <p>Администратор</p>
-            </div>
+              <div className="info-component__actions">              
+                <button className="info-component__button" onClick={handleShare}>
+                  <RxShare2 className="info-component__icon" />
+                </button>
+
+                <button className="info-component__back-button" 
+                  onClick={handleBack}               
+                >
+                  Назад
+                </button>
+
+                <button className="info-component__offer-button">
+                  Оферта
+                </button>
+              </div>
+            </div>    
           </div>
         </div>
       </div>
@@ -106,3 +151,4 @@ const handleLogoClick = () => {
 };
 
 export default InfoComponent;
+
