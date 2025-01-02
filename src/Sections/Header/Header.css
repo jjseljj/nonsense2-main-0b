@@ -20,14 +20,13 @@
   object-fit: cover; 
   top: 0;
   left: 0;
-  width: 100%; /* Растянуть на всю ширину */
-  height: 100%; /* Растянуть на всю высоту */
+  width: 100%; 
+  height: 100%; 
   z-index: 1;    
   background-size: cover; 
   background: linear-gradient(90deg, rgba(13, 127, 187, 0.02) 0%, rgba(16, 137, 201, 0.474806) 20%, #1494D9 60%, #022231 100%);
   z-index: 2;
-  transform: scale(1.1); 
-
+  transform: scale(1.1);  
 }
 .header__image {
   position: absolute;
@@ -55,13 +54,11 @@
     width: 100% !important;
     height: 100% !important;
     /*width: 1120px;
-    height: 1474px;*/      
-   
+    height: 1474px;*/           
     border-image-slice: 1;      
     pointer-events: none; 
     z-index: 1;
-    border-radius: 1.06vw !important; /* 20px */  
-    
+    border-radius: 1.06vw !important; /* 20px */        
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -73,12 +70,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: inherit; /* Наследуем радиус из .header__border */
+    border-radius: inherit; 
     background: linear-gradient(
         to right,
         #FCFC26 0%,
         #ED77A9 40%,
-        transparent 50%, /* Разрыв в линии */
+        transparent 50%, 
         transparent 60%, 
         #ED77A9 80%,
         #FCFC26 100%
@@ -116,7 +113,6 @@
     height: 95% !important; 
     /*width: 1177px;
     height: 1569px;*/
-    /*background: url('/public/1.png') no-repeat center center;*/
     background-size: cover;       
 }
 
@@ -129,8 +125,8 @@
   }
   
   .top-btn1 {
-    width: 105px !important; 
-    height: 75px !important;
+    width: 13.67vw !important; /* 105px */
+    height: 9.77vw !important; /* 75px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,7 +134,7 @@
     border: none;
     position: absolute;
     top: 0.52vw; /* 10px */
-    left: -42.54vw; /*  */
+    left: -42.54vw !important; 
     transform: none; 
     z-index: 2;
     pointer-events: auto;
@@ -174,8 +170,8 @@
     }
     
   .top-btn3 {
-    width: 105px !important; 
-    height: 75px !important;
+    width: 13.67vw !important; /* 105px */
+    height: 9.77vw !important; /* 75px */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -183,7 +179,7 @@
     border: none;
     position: absolute;
     top: 0.52vw; /* 10px */
-    left: 46.15vw; /*  */
+    left: 45vw; 
     transform: none; 
     z-index: 2;
     pointer-events: auto;
@@ -195,8 +191,8 @@
     cursor: pointer;
   }  
  
-.side-btn {
-    width: 55.78vw !important; /* 1071px */
+  .side-btn {
+    width: 65.78vw !important; /*  55.78vw 1071px */
     height: 5.89vw !important; /* 113px */
     background: #06002A;
     color: #ffffff;
@@ -260,18 +256,18 @@
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #E4B832;
-    margin-left: 5.21vw; /* 100px */
+    margin-left: 15.21vw; /* 100px */
   }
   .side-btn__icon {
     width: 1.51vw; /* 29px */
     height: 1.30vw; /* 25px */
     color: #E4B832;
+    pointer-events: auto;
   }
   .side-btn__header, .center-btn__header {
     display: flex;     
     align-items: center;
-    width: 100%;
-    
+    width: 100%;      
   }
   .button{
     text-decoration: none !important;
@@ -318,7 +314,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    z-index: 1200;
+    z-index: 900;
     pointer-events: auto;     
     display: flex !important;
   }
@@ -342,8 +338,7 @@
   height: 90%;   
   z-index: 1550;
   animation: slideIn 0.3s ease-out;
-  overflow: hidden;
-  border-radius: 20px !important;
+  overflow: hidden;    
   pointer-events: auto;
 }
 .modal-overlay {
@@ -397,45 +392,50 @@
 .modal-logo .button-right {
   display: none !important;
 }
-.header-scroll {
-  /*width: 100%;
-  height: 100vh;*/
-  overflow-y: auto; 
-  overflow-x: hidden;
+
+.header-scroll {   
+  overflow-x: hidden;   
   display: flex;
-  flex-direction: column;
-  /*justify-content: center; 
-  align-items: center;     
-  position: relative;*/
+  flex-direction: column;  
   z-index: 10;
   pointer-events: auto;
- /* transform: translateX(00%) translateY(-5%);*/
-  width: 64.27vw; /* 1234px */
+  width: 74.27vw; /* 1234px */   
   height: 35.16vw !important; /* 675px */
   background: #15001561;
   border-radius: 0 2.08vw 2.08vw 2.08vw; /* 0 40px 40px 40px */
-  backdrop-filter: blur(10.7px); /* в макете 19*/
-  box-shadow: 0px -8px 80.6px 0px #E4B832;
-  overflow-y: auto;
-  scrollbar-width: thin;
+  backdrop-filter: blur(10.7px); 
+  box-shadow: 0px -8px 80.6px 0px #E4B832;   
+  /*scrollbar-width: thin;*/
   scrollbar-color: #C8A131 #06002A;
   padding: 1.04vw; /* 20px */
   gap: 0.78vw; /* 15px */
-  margin-top: -0.78vw; /* -15px */ 
+  margin-top: -0.78vw; /* -15px */  
 }
+
 .header-scroll::-webkit-scrollbar {
   width: 0.99vw; /* 19px */
-  background: #06002A;
+  background: #06002A; 
 }
 
 .header-scroll::-webkit-scrollbar-thumb {
+  width: 0.99vw; /* 19px */
+  height: 36.2vw; /* 697px */
   background: #C8A131;
-  border-radius: 2.08vw; /* 40px */
+  transform: translateX(-20%) translateY(0%) !important;
 }
+.header-scroll::-webkit-scrollbar-track {
+  background-color: #C8A131;       
+}
+
+
 .header-buttons {
   display: flex;
-  transform: translateX(-52%) translateY(-20%);
-  align-items: center;   
+  transform: translateX(-67.5%) translateY(-20%);
+  align-items: center;       
+}
+
+a {
+  text-decoration: none;
 }
 
 .header-buttons__tab1 {
@@ -445,9 +445,8 @@
   border: 1px solid #FCFC26;
   display: flex;
   justify-content: center;
-  align-items: center;
-  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
-  border-top-left-radius: 1.04vw; /* 20px */
+  align-items: center;   
+  border-top-left-radius: 1.04vw !important; /* 20px */
   pointer-events: auto;
   font-family: 'Project Space', sans-serif;
   font-size: 1.04vw; /* 20px */
@@ -456,7 +455,7 @@
   text-align: center;
   text-transform: uppercase;
   color: #FFFFFF;
-  cursor: pointer;
+  cursor: pointer; 
 }
 
 .header-buttons__tab2 {
@@ -477,7 +476,7 @@
   text-transform: uppercase;
   color: #FFFFFF;
   cursor: pointer;
-  transform: translateX(-7%) translateY(0%);
+  transform: translateX(-7%) translateY(0%);    
 }
 
 .header-buttons__tab1.active,
@@ -487,8 +486,7 @@
 }
 .header-scroll a {
   text-decoration: none; 
-}
-
+} 
 
 
 @media (max-width:600px) {
