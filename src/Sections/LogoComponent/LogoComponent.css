@@ -48,13 +48,13 @@
     justify-content: center;
     gap: 2rem;
     margin: 0; 
-    padding-left: 4.16vw; /* 80px */
-    margin-top: 1.04vw; /* 20px */
+    padding-left: 0vw !important; 
+    margin-top: 1.2vw !important; /* 20px */
     pointer-events: auto;
 }
 .logo-modal__back-button {
     font-family: 'Inter', sans-serif;
-    font-size: 1.25vw; /* 24px */
+    font-size: 1.55vw !important; 
     font-weight: 400;
     line-height: 1.93vw; /* 37px */
     text-align: left;
@@ -68,7 +68,7 @@
 
 .logo-modal__link {
     font-family: 'Inter', sans-serif;
-    font-size: 1.25vw; /* 24px */
+    font-size: 1.55vw !important; 
     font-weight: 400;
     line-height: 1.93vw; /* 37px */
     text-align: left;
@@ -106,9 +106,9 @@
 @media (max-width: 768px) {
     .logo-modal {
         width: 88.56vw; /* 356px */
-        height: 194.28vw; /* 780px */
+        height: 94.28vw;
         border: 2px solid #FCFC26;
-        background: #380F2C;
+        background: #06002A;
         position: absolute;
         top: 0;
         left: 50%;
@@ -116,18 +116,22 @@
         display: flex;    
         flex-direction: column;
       }
+      .logo-modal__icon {
+        display: none !important;
+      }
+      
       .logo-container {
         width: 37.56vw; /* 151px */
-        height: 14.49vw; /* 58.23px */
+        height: 100vh; /* 58.23px */
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .logo-modal__content p {
         font-family: 'Inter', sans-serif;
-        font-size: 3.73vw; /* 15px */
+        font-size: 2.5vw; 
         font-weight: 400;
-        line-height: 5.97vw; /* 24px */
+        line-height: 3.97vw; 
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
@@ -136,29 +140,38 @@
     }
     .logo-modal__content {
         width: 74.31vw; /* 298.67px */
-        height: 123.73vw; /* 497.42px */
+        height:  auto; 
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin-top: 19.9vw !important; /* 80px */
+        margin-top: 10vw !important; 
     }
     .logo-modal__footer {
         width: auto;
-        height: 9.2vw; /* 37px */
+        height: auto; 
         color: #E4B832;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 0; 
-        padding-left: 4.97vw; /* 20px */
-        margin-top: 4.97vw; /* 20px */
-        transform: translateX(0%) translateY(200%);
+        align-items: center;     
+        margin: 0;       
+        margin-top: 1.97vw; /* 20px */        
     }
-    
+    .logo-modal__back-button {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.28vw !important; 
+        font-weight: 400;
+        line-height: 1.93vw; /* 37px */
+        text-align: left;
+        /*text-decoration: none;*/
+        color: inherit;
+        pointer-events: auto;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
     .logo-modal__link {
         font-family: 'Inter', sans-serif;
-        font-size: 3.98vw; /* 16px */
+        font-size: 2.28vw !important; /* 16px */
         font-weight: 400;
         line-height: 2.84vw; /* 11.4px */
         text-align: left;
@@ -193,9 +206,9 @@
 @media (max-width: 600px) {
     .logo-modal {
         width: 88.56vw; /* 356px */
-        height: 177.28vw; /* 780px */
+        height: 94.28vw;
         border: 2px solid #FCFC26;
-        background: #380F2C;
+        background: #06002A;
         position: absolute;
         top: 0;
         left: 50%;
@@ -203,18 +216,22 @@
         display: flex;    
         flex-direction: column;
       }
+      .logo-modal__icon {
+        display: none !important;
+      }
+      
       .logo-container {
         width: 37.56vw; /* 151px */
-        height: 14.49vw; /* 58.23px */
+        height: 100vh; /* 58.23px */
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .logo-modal__content p {
         font-family: 'Inter', sans-serif;
-        font-size: 3.73vw; /* 15px */
+        font-size: 2.5vw; 
         font-weight: 400;
-        line-height: 5.97vw; /* 24px */
+        line-height: 3.97vw; 
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
@@ -223,29 +240,38 @@
     }
     .logo-modal__content {
         width: 74.31vw; /* 298.67px */
-        height: 123.73vw; /* 497.42px */
+        height:  auto; 
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin-top: 19.9vw !important; /* 80px */
+        margin-top: 10vw !important; 
     }
     .logo-modal__footer {
         width: auto;
-        height: 9.2vw; /* 37px */
+        height: auto; 
         color: #E4B832;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 0; 
-        padding-left: 4.97vw; /* 20px */
-        margin-top: 4.97vw; /* 20px */
-        transform: translateX(0%) translateY(200%);
+        align-items: center;     
+        margin: 0;       
+        margin-top: 1.97vw; /* 20px */        
     }
-    
+    .logo-modal__back-button {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.28vw !important; 
+        font-weight: 400;
+        line-height: 1.93vw; /* 37px */
+        text-align: left;
+        /*text-decoration: none;*/
+        color: inherit;
+        pointer-events: auto;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
     .logo-modal__link {
         font-family: 'Inter', sans-serif;
-        font-size: 3.98vw; /* 16px */
+        font-size: 2.28vw !important; /* 16px */
         font-weight: 400;
         line-height: 2.84vw; /* 11.4px */
         text-align: left;
@@ -280,9 +306,9 @@
 @media (max-width: 402px) {
     .logo-modal {
         width: 88.56vw; /* 356px */
-        height: 194.28vw; /* 780px */
+        height: 94.28vw;
         border: 2px solid #FCFC26;
-        background: #380F2C;
+        background: #06002A;
         position: absolute;
         top: 0;
         left: 50%;
@@ -290,18 +316,22 @@
         display: flex;    
         flex-direction: column;
       }
+      .logo-modal__icon {
+        display: none !important;
+      }
+      
       .logo-container {
         width: 37.56vw; /* 151px */
-        height: 14.49vw; /* 58.23px */
+        height: 100vh; /* 58.23px */
         display: flex;
         justify-content: center;
         align-items: center;
       }
       .logo-modal__content p {
         font-family: 'Inter', sans-serif;
-        font-size: 3.73vw; /* 15px */
+        font-size: 2.5vw; 
         font-weight: 400;
-        line-height: 5.97vw; /* 24px */
+        line-height: 3.97vw; 
         text-align: left;
         text-underline-position: from-font;
         text-decoration-skip-ink: none;
@@ -310,29 +340,38 @@
     }
     .logo-modal__content {
         width: 74.31vw; /* 298.67px */
-        height: 123.73vw; /* 497.42px */
+        height:  auto; 
         margin: 0 auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        margin-top: 19.9vw !important; /* 80px */
+        margin-top: 10vw !important; 
     }
     .logo-modal__footer {
         width: auto;
-        height: 9.2vw; /* 37px */
+        height: auto; 
         color: #E4B832;
         display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        margin: 0; 
-        padding-left: 4.97vw; /* 20px */
-        margin-top: 4.97vw; /* 20px */
-        transform: translateX(0%) translateY(200%);
+        align-items: center;     
+        margin: 0;       
+        margin-top: 1.97vw; /* 20px */        
     }
-    
+    .logo-modal__back-button {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.28vw !important; 
+        font-weight: 400;
+        line-height: 1.93vw; /* 37px */
+        text-align: left;
+        /*text-decoration: none;*/
+        color: inherit;
+        pointer-events: auto;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
     .logo-modal__link {
         font-family: 'Inter', sans-serif;
-        font-size: 3.98vw; /* 16px */
+        font-size: 2.28vw !important; /* 16px */
         font-weight: 400;
         line-height: 2.84vw; /* 11.4px */
         text-align: left;
