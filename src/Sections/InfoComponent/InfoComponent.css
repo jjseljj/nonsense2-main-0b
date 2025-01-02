@@ -11,7 +11,7 @@
 .info-component__border {
   position: absolute;
   top: 3%; 
-  left: 2%;
+  left: 1.5%;
   width: 100% !important;
   height: 100% !important;   
   border: 1px solid #FCFC26; 
@@ -47,10 +47,12 @@
 }
 
 .info-component__top-buttons {
+  width: 100% !important; 
   display: flex;
-  gap: 0.52vw; /* 10px */
+  position: relative;    
   justify-content: space-between;
-  align-items: center;
+  align-items: center;  
+  padding: 0.8vw;  
 }
 
 .info-top-btn1 {
@@ -80,7 +82,7 @@
   background: none;
   border: none;
   position: absolute;
-  top: -2.2vw; /* 15px */
+  top: -3.2vw !important; 
   position: relative;
   z-index: 10000; 
   background-color: transparent;
