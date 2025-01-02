@@ -2513,7 +2513,7 @@ align-items: center;
 justify-content: center;
 background: none;
 border: none;
-transform: translateX(-50%) translateY(-60%);
+transform: translateX(-35%) translateY(-50%) !important;
 z-index: 2;
 pointer-events: auto;
 }
@@ -2525,8 +2525,8 @@ cursor: pointer;
 }
 
 .top-btn2 {
-width: 151px !important; 
-height: 58.23px !important; 
+width: 65px !important; /* 105px */
+height: 23px !important; /* 75px */
 display: flex;
 align-items: center;
 justify-content: center;
@@ -2554,7 +2554,7 @@ align-items: center;
 justify-content: center;
 background: none;
 border: none;
-transform: translateX(50%) translateY(-60%);
+transform: translateX(60%) translateY(-50%) !important;
 z-index: 2;
 pointer-events: auto;
 }
