@@ -108,6 +108,7 @@ const Header = () => {
 
         {/* Рамка */}
         <div className="header__border">
+        
           {/* Кнопки сверху */}
           <div className="header-top">
               <button className="top-btn1" onClick={handleShare}>
@@ -232,4 +233,5 @@ const Header = () => {
 };
 
 export default Header;
+
 
