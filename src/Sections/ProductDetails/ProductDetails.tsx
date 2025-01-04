@@ -55,9 +55,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
     } else {
       alert("Ваш браузер не поддерживает Web Share API.");
     }
-  };
-
-  
+  };  
   return (
     <div className="product-details">
       <div className="product-details__image-wrapper">
@@ -67,7 +65,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
               <button className="top-btn1" onClick={handleShare}>
                   <img src="/Поделиться.png" alt="Поделиться" />
               </button>  
-
             <div className="top-btn2" onClick={handleLogoClick}>
               <img src="/Group 30.png" alt="Лого" />
             </div>
@@ -81,14 +78,12 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                 </div>
               </div>
             )}
-
             <button className="top-btn3">
               <Link href="/Info">
                 <img src="/Информация.png" alt="Информация" />
               </Link>
             </button>
           </div>
-
             <div className="product-details__header">
               <button
                 className={`product-details__tab1 ${
@@ -105,10 +100,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                 Прайс                
               </button>
             </div>
-
-
-          <div className="product-details__wrapper">
-           
+          <div className="product-details__wrapper">           
             <div className="product-details__content">
               {view === "description" ? (
                 <div className="product-details__price">
@@ -135,7 +127,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                       placeholder="Введите цену"                     
                     />
                   </div>
-
                   <div className="product-details__price-delivery-option">
                     <div
                       className="item"
@@ -168,28 +159,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                       placeholder="example@domain.com"
                       className="product-details__email-input"
                     />
-                  </div>
-
-                  {/*<div className="product-details__price-email">
-                  <div className="product-details__email-prefix">
-                    <input
-                      type="text"
-                      placeholder="example"
-                      className="product-details__email-prefix-input"
-                    />
-                  </div>
-                    <div className="product-details__email-symbol">
-                    <MdOutlineAlternateEmail className="email-icon" />
-                    </div>
-                    <div className="product-details__email-domain">
-                      <input
-                        type="text"
-                        placeholder="domain.com"
-                        className="product-details__email-domain-input"
-                      />
-                    </div>
-                  </div>*/}
-
+                  </div>             
                   <div
                       className="item2"
                       onClick={() => setIsChecked(!isChecked)}
@@ -201,12 +171,10 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                       )}
                       <span className="text">Запомнить</span>
                   </div>      
-
                    <div className="product-details__price-actions-bottom">
                     <div className="product-details__back-home">
                       <Link href="/" className="back-home__button">Назад</Link>
-                    </div>
-                    
+                    </div>  
                     <button className="product-details__price-icon">
                       <div className="payment-button__content">
                         <div className="payment-button__text">Оплатить</div>
@@ -215,9 +183,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                         </div>
                       </div>
                     </button>
-
                   </div>
-
                 </div>
               ) : (
                 <div className="product-details__description">
@@ -233,7 +199,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                     <button className="price-actions__button-rate">Оценить</button>
                     <span className="price-actions__button-empty-1">{product.price}</span>
                   </div>
-
                   <div className="product-details__price-delivery-option">
                     <div
                       className="item"
@@ -244,7 +209,6 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                       ) : (
                         <FaRegSquare className="icon icon-unchecked" />
                       )}
-
                       <span className="text text-first">Отпустить, пусть летит</span>
                     </div>
                     <div
@@ -259,35 +223,13 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                       <span className="text text-second">Отправить по адресу</span>
                     </div>
                   </div>
-
                   <div className="product-details__price-email">
                     <input
                       type="email"
                       placeholder="example@domain.com"
                       className="product-details__email-input"
                     />
-                  </div>
-
-                  {/*<div className="product-details__price-email">
-                  <div className="product-details__email-prefix">
-                    <input
-                      type="text"
-                      placeholder="example"
-                      className="product-details__email-prefix-input"
-                    />
-                  </div>
-                    <div className="product-details__email-symbol">
-                    <MdOutlineAlternateEmail className="email-icon" />
-                    </div>
-                    <div className="product-details__email-domain">
-                      <input
-                        type="text"
-                        placeholder="domain.com"
-                        className="product-details__email-domain-input"
-                      />
-                    </div>
-                  </div>*/}
-
+                  </div>       
                   <div
                       className="item2"
                       onClick={() => setIsChecked(!isChecked)}
@@ -298,8 +240,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                         <FaRegSquare className="icon icon-unchecked" />
                       )}
                       <span className="text">Запомнить</span>
-                  </div>      
-
+                  </div>    
                    <div className="product-details__price-actions-bottom">
                     <div className="product-details__back-home">
                       <Link href="/" className="back-home__button">Назад</Link>
@@ -312,9 +253,7 @@ const ProductDetails: React.FC<ProductDetailsProps> = ({ productId, initialView 
                         </div>
                       </div>
                     </button>
-
-                  </div>
-                               
+                  </div>                               
                 </div>
               )}
             </div>

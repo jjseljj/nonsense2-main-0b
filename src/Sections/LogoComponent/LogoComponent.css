@@ -54,7 +54,7 @@
 }
 .logo-modal__back-button {
     font-family: 'Inter', sans-serif;
-    font-size: 1.55vw !important; 
+    font-size: 0.95vw !important; 
     font-weight: 400;
     line-height: 1.93vw; /* 37px */
     text-align: left;
@@ -64,6 +64,8 @@
     background: none;
     border: none;
     cursor: pointer;
+    transform: translateX(0%) translateY(0%) !important;
+    text-decoration: underline;
 }
 
 .logo-modal__link {

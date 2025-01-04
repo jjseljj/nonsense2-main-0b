@@ -88,7 +88,9 @@
   background-color: transparent;
   border: none;
   pointer-events: auto;
-  
+  background: rgba(255, 255, 255, 0.2) !important; 
+  backdrop-filter: blur(0.12vw) !important; /* 1px */
+  border-radius: 1.04vw; /* 20px */
 }
 .info-top-btn2 img {
   display: block;
@@ -207,7 +209,8 @@
   font-size: 1.67vw; /* 32px */
   font-weight: 400;
   line-height: 2.32vw; /* 44.48px */
-  text-align: right;
+  text-align: center;
+  /*text-align: right;*/
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #FCFC26;
@@ -254,7 +257,7 @@
 }
 .info-component__back-button {
   font-family: 'Inter', sans-serif;
-  font-size: 1.25vw; /* 24px */
+  font-size: 0.95vw; 
   font-weight: 400;
   line-height: 1.93vw; /* 37px */
   text-align: left;
@@ -265,6 +268,8 @@
   cursor: pointer;
   color: #E4B832;
   pointer-events: auto;
+  transform: translateX(500%) translateY(0%) !important;
+  text-decoration: underline; 
 }
 .info-component__offer-button {
 width: 11.2vw; /* 215px */

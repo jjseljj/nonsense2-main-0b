@@ -147,22 +147,28 @@ const Header = () => {
           </div>
            {/* Вкладки */}
            <div className="header-buttons">
-           <Link href={`/Product/1?view=form`}> 
+           <button
+                className={`header-buttons__tab1 ${activeTab === "price" ? "active" : ""}`}
+                onClick={() => handleTabClick("price")}                
+              >
+                Прайс
+              </button>
+           {/*<Link href={`/Product/1?view=form`}> 
               <button
                 className={`header-buttons__tab1 ${activeTab === "price" ? "active" : ""}`}
                 onClick={() => handleTabClick("price")}                
               >
                 Прайс
               </button>
-            </Link>
-            <Link href={`/Product/1?view=form`}> 
+            </Link>*/}
+            {/*<Link href={`/Product/1?view=form`}> 
               <button
                 className={`header-buttons__tab2 ${activeTab === "order" ? "active" : ""}`}
                 onClick={() => handleTabClick("order")}
               >
                 На заказ
               </button>
-            </Link>
+            </Link>*/}
           </div>
           {/* Центральные кнопки */}       
           <div className="header-scroll">
