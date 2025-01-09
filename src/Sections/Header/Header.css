@@ -154,7 +154,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     border: none;
     border-radius: 1.06vw; /* 20px */
     font-size: 0.85vw; /* 16px */
@@ -175,11 +175,11 @@
     font-size: 1.25vw;  /* 24px */
     font-weight: 400;
     line-height: 1.66vw; /* 31.87px */
-    text-align: left;
+    text-align: left !important;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #E4B832;
-    padding: 0.27vw; /* 5px */    
+    /*padding: 0.27vw; /* 5px */    
     margin-top: 1.04vw !important; /* 20px */
     margin-bottom: 0.52vw !important; /* 10px */
   }
@@ -188,7 +188,7 @@
     font-size: 0.93vw; 
     font-weight: 400;
     line-height: 1vw; /* 19.36px */
-    text-align: left;
+    text-align: left !important;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: #FFFFFF;
@@ -217,6 +217,9 @@
     color: #E4B832;
     margin-left: 15.21vw; /* 100px */
     white-space: nowrap;
+    display: flex;
+    justify-content: flex-start !important;
+    align-items: center !important;
   }
   .side-btn__icon {
     width: 1.51vw; /* 29px */
@@ -226,7 +229,7 @@
   }
   .side-btn__header, .center-btn__header {
     display: flex;     
-    align-items: center;
+    justify-content: space-between !important;
     width: 100%;      
   }
   .button{
@@ -234,16 +237,18 @@
   }
   .side-btn__title-wrapper, .center-btn__title-wrapper {
     display: flex;
-    align-items: center;
-    gap: 0.43vw; /* 8px */
-    width: 667px; /* px */
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 0.83vw; /* 8px */
+    width: 100% !important;
+    /*width: 667px; /* px */
     height: 3.35vw; /* 63px */
   }
   
   .side-btn__description, .center-btn__description {
     width: 100%;
     margin-top: 0.53vw; /* 10px */
-    text-align: left;    
+    text-align: left !important;    
   }
   .bottom-btn {
     width: 4.97vw; /* 93.5px */

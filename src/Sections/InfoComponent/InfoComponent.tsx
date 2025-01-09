@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import LogoComponent from "@/Sections/LogoComponent/LogoComponent";
 import { RxShare2 } from "react-icons/rx";
@@ -40,7 +40,26 @@ const handleLogoClick = () => {
     }
   };
 
-
+  useEffect(() => {
+    const updateBackground = () => {
+      const imageElement = document.querySelector(".info-component__background") as HTMLImageElement | null;
+      if (imageElement) {
+        if (window.matchMedia("(max-width: 425px)").matches) {
+          imageElement.src = "/1.png";
+        } else {
+          imageElement.src = "/images/info.png";
+        }
+      }
+    };
+  
+    updateBackground(); // Установить фон при загрузке
+    window.addEventListener("resize", updateBackground); // Отслеживание изменения размера экрана
+  
+    return () => {
+      window.removeEventListener("resize", updateBackground);
+    };
+  }, []);
+  
 
   return (
     <div className="info-component">
